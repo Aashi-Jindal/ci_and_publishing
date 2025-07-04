@@ -12,9 +12,8 @@ class MedianMapper(BaseEstimator, TransformerMixin):
 
         if not isinstance(variables, list):
             raise ValueError("variables should be a list")
-
         self.variables = variables
-        self.variables_map = dict()
+        self.variables_map: Dict[str, float] = dict()
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
@@ -42,7 +41,7 @@ class FrequentMapper(BaseEstimator, TransformerMixin):
             raise ValueError("variables should be a list")
 
         self.variables = variables
-        self.variables_map = dict()
+        self.variables_map: Dict[str, str] = dict()
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
@@ -175,7 +174,7 @@ class RareLabelEncoder(BaseEstimator, TransformerMixin):
     def __init__(self, variables: List[str]):
 
         self.variables = variables
-        self.rare_variables_map = dict()
+        self.rare_variables_map: Dict[str, str] = dict()
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
@@ -209,7 +208,7 @@ class LabelEncoderDef(BaseEstimator, TransformerMixin):
             raise ValueError("variables should be a list")
 
         self.variables = variables
-        self.variables_map = dict()
+        self.variables_map: Dict[str, str] = dict()
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
@@ -233,7 +232,7 @@ class PresentNa(BaseEstimator, TransformerMixin):
     def __init__(self, variables: List[str]):
 
         self.variables = [a for a in variables if a != "YrSold"]
-        self.variables_na = []
+        self.variables_na: List[str] = []
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
