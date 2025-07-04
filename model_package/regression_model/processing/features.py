@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict, List, Any
 
 import numpy as np
 import pandas as pd
@@ -174,7 +174,7 @@ class RareLabelEncoder(BaseEstimator, TransformerMixin):
     def __init__(self, variables: List[str]):
 
         self.variables = variables
-        self.rare_variables_map: Dict[str, str] = dict()
+        self.rare_variables_map: Dict[Any, Dict[Any, Any]] = dict()
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
@@ -208,7 +208,7 @@ class LabelEncoderDef(BaseEstimator, TransformerMixin):
             raise ValueError("variables should be a list")
 
         self.variables = variables
-        self.variables_map: Dict[str, int] = dict()
+        self.variables_map: Dict[Any, Dict[Any, int]] = dict()
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
