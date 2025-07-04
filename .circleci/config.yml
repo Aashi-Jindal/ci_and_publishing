@@ -56,7 +56,7 @@ jobs:
               -H "Authorization: Bearer $RENDER_API_KEY" \
               -H "Content-Type: application/json" \
               -d '{}' \
-              https://api.render.com/deploy/srv-xxxxxxxxxxxxxxxxx
+              https://api.render.com/deploy/srv-d1hqlgur433s73b8k2u0?key=j-Al-BpwmiA
 
 workflows:
   version: 2
