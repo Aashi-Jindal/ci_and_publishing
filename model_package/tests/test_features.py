@@ -1,8 +1,6 @@
 from regression_model.config.core import config
 from regression_model.processing.features import TemporalMapper
 
-import pandas as pd
-
 
 def test_temporal_var_transformer(sample_input_data):
     # when
