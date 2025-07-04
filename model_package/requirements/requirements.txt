@@ -1,0 +1,7 @@
+numpy==1.25
+pandas
+pydantic
+scikit-learn
+strictyaml
+ruamel.yaml
+joblib

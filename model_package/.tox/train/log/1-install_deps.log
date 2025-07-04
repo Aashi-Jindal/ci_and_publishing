@@ -1,0 +1,148 @@
+name: train
+run_id: install_deps
+env APPDATA: C:\Users\Aashi\AppData\Roaming
+env COLUMNS: 127
+env COMSPEC: C:\WINDOWS\system32\cmd.exe
+env LANG: en_US.UTF-8
+env LINES: 10
+env NUMBER_OF_PROCESSORS: 8
+env PATH: D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\.tox\test_package\Scripts;C:\Users\Aashi\.conda\envs\deployment_ml;C:\Users\Aashi\.conda\envs\deployment_ml\Library\mingw-w64\bin;C:\Users\Aashi\.conda\envs\deployment_ml\Library\usr\bin;C:\Users\Aashi\.conda\envs\deployment_ml\Library\bin;C:\Users\Aashi\.conda\envs\deployment_ml\Scripts;C:\Users\Aashi\.conda\envs\deployment_ml\bin;C:\ProgramData\anaconda3\condabin;C:\Program Files\WindowsApps\Microsoft.PowerShell_7.5.2.0_x64__8wekyb3d8bbwe;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Users\Aashi\AppData\Local\Programs\Python\Python310;C:\Program Files\Python39\Scripts;C:\Program Files\Python39;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\PuTTY;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Git\cmd;C:\Users\Aashi\AppData\Roaming\Python\Python39\Scripts;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\anaconda3;C:\ProgramData\anaconda3\Library\mingw-w64\bin;C:\ProgramData\anaconda3\Library\usr\bin;C:\ProgramData\anaconda3\Library\bin;C:\ProgramData\anaconda3\Scripts;.;C:\ProgramData\chocolatey\bin;C:\Users\Aashi\AppData\Local\Programs\Python\Python310\Scripts;C:\Users\Aashi\AppData\Local\Microsoft\WindowsApps;C:\Users\Aashi\AppData\Local\Programs\Microsoft VS Code\bin
+env PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+env PIP_DISABLE_PIP_VERSION_CHECK: 1
+env PROCESSOR_ARCHITECTURE: AMD64
+env PROGRAMDATA: C:\ProgramData
+env PROGRAMFILES: C:\Program Files
+env PROGRAMFILES(X86): C:\Program Files (x86)
+env PYTHONHASHSEED: 269
+env PYTHONIOENCODING: utf-8
+env PYTHONPATH: .
+env SSL_CERT_FILE: C:\Users\Aashi\.conda\envs\deployment_ml_build\Library\ssl\cacert.pem
+env SYSTEMDRIVE: C:
+env SYSTEMROOT: C:\WINDOWS
+env TEMP: C:\Users\Aashi\AppData\Local\Temp
+env TMP: C:\Users\Aashi\AppData\Local\Temp
+env TOX_ENV_DIR: D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\.tox\test_package
+env TOX_ENV_NAME: train
+env TOX_WORK_DIR: D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\.tox
+env USERPROFILE: C:\Users\Aashi
+env VIRTUAL_ENV: D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\.tox\test_package
+env WINDIR: C:\WINDOWS
+metadata pid: 26100
+cwd: D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques
+allow: D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\.tox\test_package\Scripts\*
+cmd: pip install -r requirements/test_requirements.txt
+exit_code: 0
+Collecting numpy (from -r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 1))
+  Using cached numpy-2.2.6-cp310-cp310-win_amd64.whl.metadata (60 kB)
+Collecting pandas (from -r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 2))
+  Using cached pandas-2.3.0-cp310-cp310-win_amd64.whl.metadata (19 kB)
+Collecting pydantic (from -r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 3))
+  Using cached pydantic-2.11.7-py3-none-any.whl.metadata (67 kB)
+Collecting scikit-learn (from -r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 4))
+  Using cached scikit_learn-1.7.0-cp310-cp310-win_amd64.whl.metadata (14 kB)
+Collecting strictyaml (from -r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 5))
+  Using cached strictyaml-1.7.3-py3-none-any.whl.metadata (11 kB)
+Collecting ruamel.yaml (from -r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 6))
+  Using cached ruamel.yaml-0.18.14-py3-none-any.whl.metadata (24 kB)
+Collecting joblib (from -r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 7))
+  Using cached joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting pytest (from -r requirements/test_requirements.txt (line 3))
+  Using cached pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting mypy (from -r requirements/test_requirements.txt (line 5))
+  Using cached mypy-1.16.1-cp310-cp310-win_amd64.whl.metadata (2.2 kB)
+Collecting black (from -r requirements/test_requirements.txt (line 6))
+  Using cached black-25.1.0-cp310-cp310-win_amd64.whl.metadata (81 kB)
+Collecting flake8 (from -r requirements/test_requirements.txt (line 7))
+  Using cached flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting isort (from -r requirements/test_requirements.txt (line 8))
+  Using cached isort-6.0.1-py3-none-any.whl.metadata (11 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 2))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 2))
+  Using cached pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 2))
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting annotated-types>=0.6.0 (from pydantic->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 3))
+  Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.33.2 (from pydantic->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 3))
+  Using cached pydantic_core-2.33.2-cp310-cp310-win_amd64.whl.metadata (6.9 kB)
+Collecting typing-extensions>=4.12.2 (from pydantic->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 3))
+  Using cached typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting typing-inspection>=0.4.0 (from pydantic->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 3))
+  Using cached typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting scipy>=1.8.0 (from scikit-learn->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 4))
+  Using cached scipy-1.15.3-cp310-cp310-win_amd64.whl.metadata (60 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 4))
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting ruamel.yaml.clib>=0.2.7 (from ruamel.yaml->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 6))
+  Using cached ruamel.yaml.clib-0.2.12-cp310-cp310-win_amd64.whl.metadata (2.8 kB)
+Collecting colorama>=0.4 (from pytest->-r requirements/test_requirements.txt (line 3))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting exceptiongroup>=1 (from pytest->-r requirements/test_requirements.txt (line 3))
+  Using cached exceptiongroup-1.3.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting iniconfig>=1 (from pytest->-r requirements/test_requirements.txt (line 3))
+  Using cached iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting packaging>=20 (from pytest->-r requirements/test_requirements.txt (line 3))
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pluggy<2,>=1.5 (from pytest->-r requirements/test_requirements.txt (line 3))
+  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest->-r requirements/test_requirements.txt (line 3))
+  Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting tomli>=1 (from pytest->-r requirements/test_requirements.txt (line 3))
+  Using cached tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+Collecting mypy_extensions>=1.0.0 (from mypy->-r requirements/test_requirements.txt (line 5))
+  Using cached mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting pathspec>=0.9.0 (from mypy->-r requirements/test_requirements.txt (line 5))
+  Using cached pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting click>=8.0.0 (from black->-r requirements/test_requirements.txt (line 6))
+  Using cached click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+Collecting platformdirs>=2 (from black->-r requirements/test_requirements.txt (line 6))
+  Using cached platformdirs-4.3.8-py3-none-any.whl.metadata (12 kB)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8->-r requirements/test_requirements.txt (line 7))
+  Using cached mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8->-r requirements/test_requirements.txt (line 7))
+  Using cached pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+Collecting pyflakes<3.5.0,>=3.4.0 (from flake8->-r requirements/test_requirements.txt (line 7))
+  Using cached pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r D:\Personal Documents\Learning\Udemy\house-prices-advanced-regression-techniques\requirements\requirements.txt (line 2))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached numpy-2.2.6-cp310-cp310-win_amd64.whl (12.9 MB)
+Using cached pandas-2.3.0-cp310-cp310-win_amd64.whl (11.1 MB)
+Using cached pydantic-2.11.7-py3-none-any.whl (444 kB)
+Using cached pydantic_core-2.33.2-cp310-cp310-win_amd64.whl (2.0 MB)
+Using cached scikit_learn-1.7.0-cp310-cp310-win_amd64.whl (10.7 MB)
+Using cached strictyaml-1.7.3-py3-none-any.whl (123 kB)
+Using cached ruamel.yaml-0.18.14-py3-none-any.whl (118 kB)
+Using cached joblib-1.5.1-py3-none-any.whl (307 kB)
+Using cached pytest-8.4.1-py3-none-any.whl (365 kB)
+Using cached pluggy-1.6.0-py3-none-any.whl (20 kB)
+Using cached mypy-1.16.1-cp310-cp310-win_amd64.whl (9.5 MB)
+Using cached black-25.1.0-cp310-cp310-win_amd64.whl (1.4 MB)
+Using cached flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+Using cached mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Using cached pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+Using cached pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+Using cached isort-6.0.1-py3-none-any.whl (94 kB)
+Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Using cached click-8.2.1-py3-none-any.whl (102 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached exceptiongroup-1.3.0-py3-none-any.whl (16 kB)
+Using cached iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Using cached mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+Using cached platformdirs-4.3.8-py3-none-any.whl (18 kB)
+Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Using cached ruamel.yaml.clib-0.2.12-cp310-cp310-win_amd64.whl (118 kB)
+Using cached scipy-1.15.3-cp310-cp310-win_amd64.whl (41.3 MB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Using cached tomli-2.2.1-py3-none-any.whl (14 kB)
+Using cached typing_extensions-4.14.0-py3-none-any.whl (43 kB)
+Using cached typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Installing collected packages: pytz, tzdata, typing-extensions, tomli, threadpoolctl, six, ruamel.yaml.clib, pygments, pyflakes, pycodestyle, pluggy, platformdirs, pathspec, packaging, numpy, mypy_extensions, mccabe, joblib, isort, iniconfig, colorama, annotated-types, typing-inspection, scipy, ruamel.yaml, python-dateutil, pydantic-core, mypy, flake8, exceptiongroup, click, strictyaml, scikit-learn, pytest, pydantic, pandas, black
+
+Successfully installed annotated-types-0.7.0 black-25.1.0 click-8.2.1 colorama-0.4.6 exceptiongroup-1.3.0 flake8-7.3.0 iniconfig-2.1.0 isort-6.0.1 joblib-1.5.1 mccabe-0.7.0 mypy-1.16.1 mypy_extensions-1.1.0 numpy-2.2.6 packaging-25.0 pandas-2.3.0 pathspec-0.12.1 platformdirs-4.3.8 pluggy-1.6.0 pycodestyle-2.14.0 pydantic-2.11.7 pydantic-core-2.33.2 pyflakes-3.4.0 pygments-2.19.2 pytest-8.4.1 python-dateutil-2.9.0.post0 pytz-2025.2 ruamel.yaml-0.18.14 ruamel.yaml.clib-0.2.12 scikit-learn-1.7.0 scipy-1.15.3 six-1.17.0 strictyaml-1.7.3 threadpoolctl-3.6.0 tomli-2.2.1 typing-extensions-4.14.0 typing-inspection-0.4.1 tzdata-2025.2

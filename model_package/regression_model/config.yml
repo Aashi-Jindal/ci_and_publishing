@@ -1,0 +1,215 @@
+# Package Overview
+package_name: regression_model
+
+# Data Files
+training_data_file: train.csv
+test_data_file: test.csv
+
+pipeline_name: regression_model
+pipeline_save_file: regression_model_output_v
+
+# Variables
+# The variable we are attempting to predict (sale price)
+target: SalePrice
+
+
+# Will cause syntax errors since they begin with numbers
+variables_to_rename:
+  1stFlrSF: FirstFlrSF
+  2ndFlrSF: SecondFlrSF
+  3SsnPorch: ThreeSsnPortch
+
+features:
+  - MSSubClass
+  - MSZoning
+  - LotArea
+  - LotConfig
+  - LandSlope
+  - Neighborhood
+  - Condition1
+  - BldgType
+  - OverallQual
+  - OverallCond
+  - YearBuilt
+  - YearRemodAdd
+  - RoofStyle
+  - MasVnrType
+  - MasVnrArea
+  - ExterQual
+  - Foundation
+  - BsmtQual
+  - BsmtExposure
+  - BsmtFinType1
+  - HeatingQC
+  - CentralAir
+  - FirstFlrSF #renamed
+  - GrLivArea
+  - BsmtFullBath
+  - FullBath
+  - HalfBath
+  - KitchenQual
+  - Functional
+  - FireplaceQu
+  - GarageType
+  - GarageFinish
+  - GarageCars
+  - PavedDrive
+  - WoodDeckSF
+  - ScreenPorch
+  - Fence
+  - SaleType
+  - SaleCondition
+  - YrSold # To calculate temporal vars
+
+
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 0
+
+alpha: 0.001
+
+
+# categorical variables with NA in train set
+
+categorical_vars_with_na_missing:
+  - MasVnrType
+  - BsmtQual
+  - BsmtExposure
+  - BsmtFinType1
+  - FireplaceQu
+  - GarageType
+  - GarageFinish
+  - Fence
+
+numerical_vars_with_na:
+  - MasVnrArea
+  #- MSSubClass
+
+temporal_vars:
+  - YearRemodAdd
+  - YearBuilt
+
+ref_var: YrSold
+
+# variables to log transform
+numericals_log_vars:
+  - LotArea
+  - FirstFlrSF
+  - GrLivArea
+
+
+# variables to map
+qual_vars:
+  - ExterQual
+  - BsmtQual
+  - HeatingQC
+  - KitchenQual
+  - FireplaceQu
+
+exposure_vars:
+  - BsmtExposure
+
+finish_vars:
+  - BsmtFinType1
+
+garage_vars:
+  - GarageFinish
+
+drive_vars:
+ - PavedDrive
+
+fence_vars:
+ - Fence
+
+categorical_vars:
+  - MSSubClass
+  - MSZoning
+  - LotConfig
+  - LandSlope
+  - Neighborhood
+  - Condition1
+  - BldgType
+  - RoofStyle
+  - MasVnrType
+  - Foundation
+  - CentralAir
+  - Functional
+  - GarageType
+  - SaleType
+  - SaleCondition
+
+
+categorical_vars_label_encode:
+  - MSZoning
+  - LotConfig
+  - LandSlope
+  - Neighborhood
+  - Condition1
+  - BldgType
+  - RoofStyle
+  - MasVnrType
+  - Foundation
+  - CentralAir
+  - Functional
+  - GarageType
+  - SaleType
+  - SaleCondition
+
+# variable mappings
+qual_mappings:
+  Po: 1
+  Fa: 2
+  TA: 3
+  Gd: 4
+  Ex: 5
+  Not Applicable: 0
+  NA: 0
+
+fence_mappings:
+  Not Applicable: 0
+  NA: 0
+  MnWw: 1
+  GdWo: 2
+  MnPrv: 3
+  GdPrv: 4
+
+exposure_mappings:
+  Not Applicable: 0
+  NA: 0
+  No: 1
+  Mn: 2
+  Av: 3
+  Gd: 4
+
+finish_mappings:
+  Not Applicable: 0
+  NA: 0
+  Unf: 1
+  LwQ: 2
+  Rec: 3
+  BLQ: 4
+  ALQ: 5
+  GLQ: 6
+
+garage_mappings:
+  Not Applicable: 0
+  NA: 0
+  Unf: 1
+  RFn: 2
+  Fin: 3
+
+drive_mappings:
+  NA: 0
+  N: 1
+  P: 2
+  Y: 3
+
+
+
+
+
+
+
+
