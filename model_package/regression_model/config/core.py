@@ -13,6 +13,7 @@ CONFIG_FILE_PATH = PACKAGE_ROOT / "config.yml"
 DATASET_DIR = PACKAGE_ROOT / "datasets"
 TRAINED_MODEL_DIR = PACKAGE_ROOT / "trained_models"
 
+
 class AppConfig(BaseModel):
     """
     Application-level config.
@@ -68,7 +69,7 @@ class Config(BaseModel):
 def create_and_validate_config() -> Config:
     """Run validation on config values."""
 
-    #CONFIG_FILE_PATH = "regression_model/config.yml"
+    # CONFIG_FILE_PATH = "regression_model/config.yml"
 
     with open(CONFIG_FILE_PATH, "r") as conf_file:
         parsed_config = load(conf_file.read())

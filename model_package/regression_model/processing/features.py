@@ -99,7 +99,7 @@ class TemporalMapper(BaseEstimator, TransformerMixin):
         return self
 
     def transform(self, X: pd.DataFrame) -> pd.DataFrame:
-        
+               
         for var in self.variables:
             X.loc[:, var] = X.loc[:, self.ref_var] - X.loc[:, var]
 
