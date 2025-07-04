@@ -208,7 +208,7 @@ class LabelEncoderDef(BaseEstimator, TransformerMixin):
             raise ValueError("variables should be a list")
 
         self.variables = variables
-        self.variables_map: Dict[str, str] = dict()
+        self.variables_map: Dict[str, int] = dict()
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
 
