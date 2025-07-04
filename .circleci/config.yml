@@ -300,7 +300,7 @@ workflows:
   section_07:
     jobs:
       - section_07_test_app
-      - section_07_deploy_app_to_heroku:
+      - section_07_deploy_app_to_render:
           requires:
             - section_07_test_app
           filters:
