@@ -18,7 +18,8 @@ def load_dataset(fname: str) -> pd.DataFrame:
 
 def save_pipeline(pipe: Pipeline):
 
-    pipe_path = Path(f"{TRAINED_MODEL_DIR}/{config.app_config.pipeline_save_file}{_version}.pkl")
+    pipe_name = f"{config.app_config.pipeline_save_file}{_version}.pkl"
+    pipe_path = Path(f"{TRAINED_MODEL_DIR}/{pipe_name}")
     joblib.dump(pipe, pipe_path)
 
 
