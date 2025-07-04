@@ -11,7 +11,7 @@ def test_make_prediction(sample_input_data_ex):
 
     # When
     result = predict_price(pd.DataFrame(sample_input_data_ex))
-    
+
     # Then
     predictions = result.get("predictions")
     assert isinstance(predictions, list)

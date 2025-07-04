@@ -92,5 +92,5 @@ def sample_input_data_ex():
                "SaleType": "WD",
                "SaleCondition": "Normal"
                }]
-    
+
     return sample
