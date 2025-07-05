@@ -19,6 +19,14 @@ prepare_tox: &prepare_tox
     command: |
       pip install tox
 
+fetch_data: &fetch_data
+  run:
+    name: Set script permissions and fetch data
+    command: |
+      source venv/bin/activate
+      chmod +x ./scripts/fetch_kaggle_dataset.sh
+      ./scripts/fetch_kaggle_dataset.sh
+
 jobs:
   test_app:
     <<: *defaults
@@ -58,14 +66,33 @@ jobs:
               -d '{}' \
               https://api.render.com/deploy/srv-d1hqlgur433s73b8k2u0?key=j-Al-BpwmiA
 
+  test_and_upload_regression_model:
+    <<: *defaults
+    steps:
+      - checkout:
+          path: ~/project
+      - *prepare_tox
+      - run:
+          name: Fetch the data
+          command: |
+            tox -e fetch_data
+      - run:
+          name: Test the model
+          command: |
+            tox
+      - run:
+          name: Publish model to Gemfury
+          command: |
+            tox -e publish_model
+
 workflows:
   version: 2
   test_and_deploy:
     jobs:
-      - test_model_package
+      - test_and_upload_regression_model
       - test_app:
           requires:
-            - test_model_package
+            - test_and_upload_regression_model
       - deploy_app:
           requires:
             - test_app
