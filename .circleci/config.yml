@@ -74,6 +74,10 @@ jobs:
           path: ~/project
       - *prepare_tox
       - run:
+          name: Install dependencies
+          command: |
+            pip install tox kaggle
+      - run:
           name: Fetch the data
           command: |
             tox -e fetch_data
