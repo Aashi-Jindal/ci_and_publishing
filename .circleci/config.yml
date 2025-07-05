@@ -86,6 +86,10 @@ jobs:
           command: |
             tox
       - run:
+          name: Make publish_model.sh executable
+          command: |
+            chmod +x ../scripts/publish_model.sh
+      - run:
           name: Publish model to Gemfury
           command: |
             tox -e publish_model
